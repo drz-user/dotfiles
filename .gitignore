@@ -1,0 +1,13 @@
+# Ignore all
+*
+
+#Add the following files
+!.gitignore
+!.bashrc
+!.ncpamixer.conf
+!eduroam.sh
+!schindler_list.txt
+
+#Add the following folers
+!.config/
+!HyprScripts/
