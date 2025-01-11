@@ -9,5 +9,5 @@
 !schindler_list.txt
 
 #Add the following folers
-!/.config/
-!/HyprScripts/
+!/.config/**
+!/HyprScripts/**

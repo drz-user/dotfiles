@@ -3,6 +3,7 @@ base-devel
 bluez
 bluez-utils
 brightnessctl
+btop
 ctpv-git
 efibootmgr
 extremetuxracer
@@ -26,6 +27,7 @@ minecraft-launcher
 nano
 ncpamixer
 neofetch
+neovim
 network-manager-applet
 networkmanager
 pcmanfm-gtk3
