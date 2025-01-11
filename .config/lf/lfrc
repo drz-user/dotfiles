@@ -1,0 +1,127 @@
+#Remove default binds
+clearmaps
+
+#Basic Settings
+set hidden true
+set ignorecase true
+set icons true
+set mouse true
+
+#Basic Scripts
+cmd unarchive ${{
+	case "$f" in
+		*.zip) unzip "$f";;
+		*.tar.gz) tar -xzvf "$f";;
+		*.tar.bz2) tar -xjvf "$f";;
+		*.tar) tar -xvf "$f";;
+		*) echo "Unsupported format";;
+	esac
+}}
+
+cmd mkdir ${{
+	printf "Directory Name: "
+	read ans
+	mkdir $ans
+}}
+
+cmd mkfile ${{
+	printf "File Name: "
+	read ans
+	$EDITOR $ans
+}}
+
+#trash-cli Scripts
+cmd trash-put ${{
+	for file in $fx
+	do
+		trash-put $file
+	done
+}}
+
+cmd trash-empty ${{
+	printf "delete items older than ? (in days): "
+	read ans
+	trash-empty $ans		
+}}
+
+cmd trash-list ${{
+	printf "Items in trash:\n\n"
+	trash-list
+	printf "\n"
+	printf "Press any key to exit"
+	read ans
+}}
+
+cmd trash-restore ${{
+	trash-restore
+}}
+
+# image previews
+set previewer ctpv
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id
+
+#Binds
+map q quit
+map k up
+map '<up>' up
+map '<c-u>' half-up
+map '<c-b>' page-up
+map j down
+map '<down>' down
+map '<c-d>' half-down
+map '<c-f>' page-down
+map h updir
+map '<left>' updir
+map l open
+map '<right>' open
+map gg top
+map gh cd /home/drz
+map gd cd ~/Downloads
+map gc cd ~/.config
+map gt cd ~/.local/share/Trash/files
+map G bottom
+map v invert
+map u unselect
+map y copy
+map d cut
+map p paste
+map c clear
+map '<c-r>' reload
+map r rename
+map zh set hidden!
+map zr set reverse!
+map zn set info
+map zs set info size
+map zt set info time
+map za set info size:time
+map sn :set sortby natural; set info
+map ss :set sortby size; set info size
+map st :set sortby time; set info time
+map sa :set sortby atime; set info atime
+map sc :set sortby ctime; set info ctime
+map se :set sortby ext; set info
+map md mkdir
+map mf mkfile
+map \$ shell
+map \% shell-pipe
+map \& shell-async
+map \/ search
+map \! shell-wait
+map n search-next
+map N search-prev
+map ? search-back
+map <space> :toggle; down
+
+#touchpad navigation
+map <m-up> up
+map <m-down> down
+map <c-m-up> scroll-up
+map <c-m-down> scroll-down
+
+#trash-cli
+map tp trash-put
+map te trash-empty
+map tl trash-list
+map tr trash-restore

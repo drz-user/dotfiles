@@ -1,0 +1,45 @@
+// -*- mode: jsonc -*-
+{
+   // General Config
+ 	 "layer": "top",
+	 "height":32,
+	 "margin-left":2,
+	 "margin-right":2,
+	 "margin-top":2,
+	 "margin-bottom":2,
+	 "spacing":0,
+
+   // Load Modules
+  	"include": ["/home/drz/.config/waybar/modules.json"], 
+
+
+    // Choose the order of the modules
+    "modules-left": [
+        "custom/appmenu",
+	"wlr/taskbar",
+	"hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+	"pulseaudio",
+	"network",
+	"bluetooth",
+	"battery",
+	"group/hardware",
+	"backlight",
+	"clock",
+	"custom/exit"
+    ],
+
+    // Group Hardware
+    "group/hardware": {
+	    "orientation": "horizontal",
+	    "modules": [
+		    "disk",
+		    "cpu",
+		    "memory"
+	    ]
+    }
+}
