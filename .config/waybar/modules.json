@@ -26,7 +26,7 @@
   "backlight" : {
 	"device": "intel_backlight",
 	"format": "{icon}  {percent}%",
-	"format-icons": ["<span color=\"#00ff00\">󰱊</span>","<span color =\"#4c4cff\">󰱌</span>"],
+	"format-icons": ["<span color=\"#ff0000\"></span>","<span color=\"#ff0000\"></span>","<span color=\"#ff5a00\"></span>","<span color=\"#ff5a00\"></span>","<span color=\"#ff9a00\"></span>","<span color=\"#ff9a00\"></span>","<span color=\"#ffce00\"></span>","<span color=\"#ffce00\"></span>","<span color=\"#f0ff00\"></span>","<span color=\"#f0ff00\"></span>"],
         "on-click": "kitty --class nmwui"
   },
 
@@ -56,7 +56,7 @@
   // Wofi Application Launcher
   "custom/appmenu": {
     // START APPS LABEL
-    "format": "󱓞",
+    "format": "󰞬",
     // END APPS LABEL
     "on-click": "wofi --show=drun",
     "tooltip":false

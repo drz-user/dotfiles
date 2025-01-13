@@ -7,7 +7,7 @@
 
 window#waybar {
     background-color: rgba(56, 34, 15, 0.3);
-    border: 2px solid rgba(193, 157, 103, 0.5);
+    border: 2px solid rgba(255, 0, 193, 0.5);
     border-radius: 9px;
     color: #89befb;
 }
@@ -107,10 +107,12 @@ button:hover {
 
 #network {
     min-width: 56px;
+    color: #df9dc3;
 }
 
 #clock {
     min-width: 56px;
+    color : #f222ff;
 }
 
 #bluetooth {
@@ -134,12 +136,12 @@ button:hover {
 
 #custom-appmenu {
     padding-left:12px; 
-    font-size: 16px;
-    color: #c19d67;
-    min-width: 16px;
+    font-size: 24px;
+    color: #8c1eff;
+    min-width: 32px;
 }
 #custom-appmenu:hover {
-    font-size: 18px;
+    font-size: 26px;
 }
 
 #taskbar {
@@ -163,18 +165,18 @@ button:hover {
 
 
 #battery {
-    color: #ff7676;
+    color: #ff71ce;
     min-width: 56px;
 }
 
 #backlight {
-    color: #b37dec;
+    color: #fffb96;
     min-width: 56px;
 
 }
 
 #battery.charging, #battery.plugged {
-    color: #26A65B;
+    color: #04cc80;
 }
 
 #power-profiles-daemon {
@@ -244,6 +246,7 @@ label:focus {
 
 #pulseaudio {
     min-width: 32px;
+    color : #b967ff;
 }
 
 #pulseaudio.muted {
