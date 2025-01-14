@@ -1,6 +1,3 @@
-killall waybar
-waybar &
-hyprctl hyprpaper unload all
-killall hyprpaper
-hyprpaper &
-exit
+echo "theme name: "
+read ans
+git checkout $ans
