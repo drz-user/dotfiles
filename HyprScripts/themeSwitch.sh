@@ -1,3 +1,3 @@
 echo "theme name: "
 read ans
-git checkout $ans
+git checkout "$ans"
