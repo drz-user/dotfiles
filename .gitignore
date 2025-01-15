@@ -15,3 +15,7 @@
 !/HyprScripts/**
 !/Wallpapers/
 !/Wallpapers/**
+
+#Ignore LIbreOFFICE
+/.config/libreoffice/
+/.config/libreoffice/**
