@@ -1,0 +1,68 @@
+#!/bin/bash
+
+n=2 #number of themes
+
+printf '\e[?1049h'
+printf '\e[?25l'
+clear
+
+echo -e "   \u250C              \u2510"
+echo -e "     Choose theme"
+echo -e "   \u2514              \u2518"
+echo -e "                      "
+echo -e " \u2502 > master          "
+echo -e " \u2502 cornflower        "
+echo -e " \u2502                   "
+echo -e " \u2502                   "
+echo -e " \u2502                   "
+echo -e " \u2502                   "
+echo -e " \u2502                   "
+echo -e " \u2502                   "
+
+choice=0
+
+while read -rsn1 ui; do
+    case "$ui" in
+    $'\x1b')    
+        read -rsn1 -t 0.1 char
+        if [[ "$char" == "[" ]]; then
+            read -r -s -n 1 -t 0.1 char
+            case "$char" in
+            "B"|"C") # right
+		choice=$(( ($choice+1) % $n  ));;
+            "A"|"D") # left
+		choice=$(( ((($choice-1) % $n) + $n) % $n  ));;
+            esac
+
+	    if [[ choice -eq 0 ]]; then
+		    echo -e -n "\e[5;4H> master\e[0m"
+		    echo -e -n "\e[6;4Hcornflower  \e[0m"
+	    elif [[ choice -eq 1 ]]; then
+		    echo -e -n "\e[5;4Hmaster  \e[0m"
+		    echo -e -n "\e[6;4H> cornflower\e[0m"
+	    fi
+
+        fi
+        # Flush "stdin" with 0.1  sec timeout.
+        read -rsn5 -t 0.1
+        ;;
+    $'\0')
+    	break ;;     
+
+    q)
+	printf '\e[?1049l'
+	printf '\e[?25h'
+    	exit 0;;
+    esac
+done
+
+case $choice in
+	0)
+		git checkout master;;
+	1)
+		git checkout cornflower;;
+esac
+
+printf '\e[?1049l'
+printf '\e[?25h'
+exit 0
