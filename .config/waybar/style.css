@@ -6,10 +6,10 @@
 }
 
 window#waybar {
-    background-color: rgba(30, 30, 30, 0.5);
-    border: 2px solid rgba(90, 90, 90, 1);
-    border-radius: 0px;
-    color: #999999;
+    background-color: rgba(56, 34, 15, 0.3);
+    border: 2px solid rgba(193, 157, 103, 0.5);
+    border-radius: 9px;
+    color: #89befb;
 }
 
 window#waybar.hidden {
@@ -31,19 +31,28 @@ button {
     /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
-    font-size: 13px;
-    color: #999999;
+    font-size: 12px;
+    color: #89befb;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
     text-shadow: inherit;
-    color: #ffffff;
+    font-size: 15px;
+    color: #89befb;
 
 }
 
 /* you can set a style on hover for any module like this */
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#clock:hover,
+#backlight:hover {
+   font-size: 15px;
+}
+
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
@@ -61,7 +70,8 @@ button:hover {
 }
 
 #workspaces button.active {
-    box-shadow: inset 0 -2px #bbbbbb;
+    box-shadow: inset 0 -2px #aa8a02;
+    font-size: 15px;
 
 }
 
@@ -90,16 +100,6 @@ button:hover {
     font-size: 13px;
 }
 
-#pulseaudio:hover,
-#network:hover,
-#bluetooth:hover,
-#clock:hover,
-#custom-exit:hover,
-#custom-appmenu:hover,
-#backlight:hover {
-	color: #ffffff; 
-}
-
 #cpu,#memory,#disk {
     min-width: 40px;
     font-size: 11px;
@@ -115,7 +115,12 @@ button:hover {
 
 #bluetooth {
     font-size: 15px;
+    color: #0082FC;
     min-width: 16px;
+}
+
+#bluetooth:hover {
+    font-size: 19px;
 }
 
 #window,
@@ -128,9 +133,13 @@ button:hover {
 }
 
 #custom-appmenu {
-    padding-left:0px; 
-    font-size: 20px;
-    min-width: 32px;
+    padding-left:12px; 
+    font-size: 16px;
+    color: #c19d67;
+    min-width: 16px;
+}
+#custom-appmenu:hover {
+    font-size: 18px;
 }
 
 #taskbar {
@@ -154,16 +163,18 @@ button:hover {
 
 
 #battery {
+    color: #ff7676;
     min-width: 56px;
 }
 
 #backlight {
+    color: #b37dec;
     min-width: 56px;
 
 }
 
 #battery.charging, #battery.plugged {
-    color: #00ff00;
+    color: #26A65B;
 }
 
 #power-profiles-daemon {
@@ -185,8 +196,13 @@ button:hover {
 
 #custom-exit {
     padding-right: 12px;
+    color: #b25b6e;
     font-size: 15px;
     min-width: 16px;
+}
+
+#custom-exit:hover {
+     font-size: 18px;
 }
 
 #power-profiles-daemon.performance {
