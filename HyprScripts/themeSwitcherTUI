@@ -1,6 +1,6 @@
 #!/bin/bash
 
-n=2 #number of themes
+n=4 #number of themes
 
 printf '\e[?1049h'
 printf '\e[?25l'
@@ -12,8 +12,8 @@ echo -e "   \u2514              \u2518"
 echo -e "                      "
 echo -e " \u2502 > master          "
 echo -e " \u2502 cornflower        "
-echo -e " \u2502                   "
-echo -e " \u2502                   "
+echo -e " \u2502 khrushchevka      "
+echo -e " \u2502 synth             "
 echo -e " \u2502                   "
 echo -e " \u2502                   "
 echo -e " \u2502                   "
@@ -34,12 +34,19 @@ while read -rsn1 ui; do
 		choice=$(( ((($choice-1) % $n) + $n) % $n  ));;
             esac
 
+	    echo -e -n "\e[5;4Hmaster  \e[0m"
+	    echo -e -n "\e[6;4Hcornflower  \e[0m"
+	    echo -e -n "\e[7;4Hkhrushchevka  \e[0m"
+	    echo -e -n "\e[8;4Hsynth  \e[0m"
+
 	    if [[ choice -eq 0 ]]; then
 		    echo -e -n "\e[5;4H> master\e[0m"
-		    echo -e -n "\e[6;4Hcornflower  \e[0m"
 	    elif [[ choice -eq 1 ]]; then
-		    echo -e -n "\e[5;4Hmaster  \e[0m"
 		    echo -e -n "\e[6;4H> cornflower\e[0m"
+	    elif [[ choice -eq 2 ]]; then
+		    echo -e -n "\e[7;4H> khrushchevka\e[0m"
+	    elif [[ choice -eq 3 ]]; then
+		    echo -e -n "\e[8;4H> synth\e[0m"
 	    fi
 
         fi
@@ -61,6 +68,10 @@ case $choice in
 		git checkout master;;
 	1)
 		git checkout cornflower;;
+	2)
+		git checkout khrushchevka;;
+	3)
+		git checkout synth;;
 esac
 
 printf '\e[?1049l'
