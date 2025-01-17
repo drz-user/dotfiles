@@ -7,9 +7,11 @@ btop
 ctpv-git
 efibootmgr
 extremetuxracer
+fastfetch
 firefox
 gimp
 git
+git-graph
 grim
 grub
 hyprland
@@ -26,7 +28,6 @@ man-pages
 minecraft-launcher
 nano
 ncpamixer
-neofetch
 neovim
 network-manager-applet
 networkmanager
@@ -39,6 +40,7 @@ sddm-sugar-dark
 slurp
 steam
 swaylock-effects
+thefuck
 trash-cli
 ttf-cascadia-code-nerd
 ttf-font-awesome
@@ -47,6 +49,7 @@ uwsm
 vi
 vim
 waybar
+wf-recorder
 wireplumber
 wl-clipboard
 wlogout

@@ -10,7 +10,7 @@ echo -e "   \u250C              \u2510"
 echo -e "     Choose theme"
 echo -e "   \u2514              \u2518"
 echo -e "                      "
-echo -e " \u2502 > master          "
+echo -e " \u2502 master            "
 echo -e " \u2502 cornflower        "
 echo -e " \u2502 khrushchevka      "
 echo -e " \u2502 synth             "
@@ -21,7 +21,34 @@ echo -e " \u2502                   "
 
 choice=0
 
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+
+case "$branch" in
+	"master")
+		choice=0;;
+	"cornflower")
+		choice=1;;
+	"khrushchevka")
+		choice=2;;
+	"synth")
+		choice=3;;
+esac
+
+if [[ choice -eq 0 ]]; then
+	echo -e -n "\e[5;4H> master\e[0m"
+elif [[ choice -eq 1 ]]; then
+	echo -e -n "\e[6;4H> cornflower\e[0m"
+elif [[ choice -eq 2 ]]; then
+	echo -e -n "\e[7;4H> khrushchevka\e[0m"
+elif [[ choice -eq 3 ]]; then
+	echo -e -n "\e[8;4H> synth\e[0m"
+fi
+
 while read -rsn1 ui; do
+
+
+
     case "$ui" in
     $'\x1b')    
         read -rsn1 -t 0.1 char
@@ -33,12 +60,12 @@ while read -rsn1 ui; do
             "A"|"D") # left
 		choice=$(( ((($choice-1) % $n) + $n) % $n  ));;
             esac
-
+	    
 	    echo -e -n "\e[5;4Hmaster  \e[0m"
 	    echo -e -n "\e[6;4Hcornflower  \e[0m"
 	    echo -e -n "\e[7;4Hkhrushchevka  \e[0m"
 	    echo -e -n "\e[8;4Hsynth  \e[0m"
-
+	    
 	    if [[ choice -eq 0 ]]; then
 		    echo -e -n "\e[5;4H> master\e[0m"
 	    elif [[ choice -eq 1 ]]; then
