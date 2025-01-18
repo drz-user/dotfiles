@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'ShureTechMono Nerd Font';
    /* font-size: 12px;*/
     transition-duration: 0;
 }
@@ -100,13 +100,17 @@ button:hover {
     font-size: 13px;
 }
 
-#cpu,#memory,#disk {
-    min-width: 40px;
-    font-size: 11px;
+#cpu,#memory,#disk,#temperature {
+    font-size: 12px;
+    min-width: 40px; 
+}
+
+#temperature {
+	margin-left: 16px;
 }
 
 #network {
-    min-width: 56px;
+    min-width: 24px;
     color: #df9dc3;
 }
 
@@ -135,18 +139,16 @@ button:hover {
 }
 
 #custom-appmenu {
-    padding-left:12px; 
     font-size: 24px;
     color: #8c1eff;
     min-width: 32px;
 }
 #custom-appmenu:hover {
-    font-size: 26px;
+    font-size: 28px;
 }
 
 #taskbar {
     margin-right: 8px;
-    margin-left: 16px;
 }
 
 #taskbar button {
@@ -166,12 +168,12 @@ button:hover {
 
 #battery {
     color: #ff71ce;
-    min-width: 56px;
+    min-width: 48px;
 }
 
 #backlight {
     color: #fffb96;
-    min-width: 56px;
+    min-width: 48px;
 
 }
 
@@ -245,7 +247,7 @@ label:focus {
 }
 
 #pulseaudio {
-    min-width: 32px;
+    min-width: 48px;
     color : #b967ff;
 }
 
@@ -265,11 +267,10 @@ label:focus {
 
 
 #temperature {
-    background-color: #f0932b;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+	color: #ff0000;
 }
 
 #tray {

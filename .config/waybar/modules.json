@@ -25,7 +25,7 @@
   // Backlight
   "backlight" : {
 	"device": "intel_backlight",
-	"format": "{icon}  {percent}%",
+	"format": "{icon} {percent}%",
 	"format-icons": ["<span color=\"#ff0000\"></span>","<span color=\"#ff0000\"></span>","<span color=\"#ff5a00\"></span>","<span color=\"#ff5a00\"></span>","<span color=\"#ff9a00\"></span>","<span color=\"#ff9a00\"></span>","<span color=\"#ffce00\"></span>","<span color=\"#ffce00\"></span>","<span color=\"#f0ff00\"></span>","<span color=\"#f0ff00\"></span>"],
         "on-click": "kitty --class nmwui"
   },
@@ -100,18 +100,18 @@
 
   // CPU
   "cpu": {
-    "format": "C:{usage}% "
+    "format": " <span size='2pt'> </span>{usage}% "
   },
  
   // Memory
   "memory": {
-    "format": "M:{}% "
+    "format": " <span size='2pt'> </span>{}% "
   },
 
   // Harddisc space used
   "disk": {
     "interval": 30,
-    "format": "D:{percentage_used}% ",
+    "format": " <span size='2pt'> </span>{percentage_used}% ",
     "path": "/"
   },
 
@@ -119,12 +119,12 @@
   // Network
   "network": {
     "format": "{ifname}",
-    "format-wifi": "   {signalStrength}%",
-    "format-ethernet": "  {ifname}",
-    "format-disconnected": "Disconnected ⚠",
-    "tooltip-format": " {ifname} via {gwaddri}",
-    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
-    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+    "format-wifi": "󰖩",
+    "format-ethernet": "󰈁 {ifname}",
+    "format-disconnected": "󰖪",
+    "tooltip-format": "󰈁 {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "󰖩  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-ethernet": "󰈁 {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
     "on-click": "kitty --class netz nmtui"
@@ -138,32 +138,24 @@
       "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-charging": "󰻹  {capacity}%",
-    "format-plugged": "󰻹  {capacity}%",
+    "format-charging": "󰠠 {capacity}%",
+    "format-plugged": "󰠠 {capacity}%",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": ["󰴔 ", "󰋕 ", "󰛞 ", "󰋑 ", "󰩖 "],
+    "format-icons": ["<span color=\"#ff1493\"></span>","<span color=\"#ff1493\"></span>","<span color=\"#e51284\"></span>","<span color=\"#e51284\"></span>","<span color=\"#cc1075\"></span>","<span color=\"#cc1075\"></span>","<span color=\"#b20e66\"></span>","<span color=\"#b20e66\"></span>","<span color=\"#990c58\"></span>","<span color=\"#990c58\"></span>"],
     "interval" : 3
   },
 
   // Pulseaudio
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{icon}   {volume}%",
-    "format-bluetooth": "{icon}  {volume}%",
-    "format-bluetooth-muted": "{icon} ",
-    "format-muted": " ",
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂯{icon} {volume}%",
+    "format-bluetooth-muted": "󰂯<span color=\"#369acd\"></span>",
+    "format-muted": "<span color=\"#369acd\"></span>",
     "format-source": "{volume}% ",
     "format-source-muted": "",
-    "format-icons": {
-      "headphone": " ",
-      "hands-free": " ",
-      "headset": " ",
-      "phone": " ",
-      "portable": " ",
-      "car": " ",
-      "default": ["", "", ""]
-    },
+    "format-icons":  ["<span color=\"#6644af\"></span>","<span color=\"#6644af\"></span>","<span color=\"#4d6fbe\"></span>","<span color=\"#4d6fbe\"></span>","<span color=\"#369acd\"></span>","<span color=\"#369acd\"></span>","<span color=\"#1ec4dc\"></span>","<span color=\"#1ec4dc\"></span>","<span color=\"#07efeb\"></span>","<span color=\"#07efeb\"></span>"],
     "on-click": "kitty --class nmwui ncpamixer"
   },
 
@@ -174,5 +166,12 @@
     "format-off": "󰂲",
     "interval": 30,
     "on-click": "kitty --class nmwui bluetoothctl"
+ },
+
+ // Temperature
+ "temperature": {
+	"critical-threshold": 80,
+	"format-critical": "<span size='2pt'> </span>{temperatureC}°C",
+	"format": "<span size='2pt'> </span>{temperatureC}°C"
  }
 }
