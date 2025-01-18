@@ -173,5 +173,12 @@
     "format-off": "󰂲",
     "interval": 30,
     "on-click": "kitty --class nmwui bluetoothctl"
+ },
+
+  // Temperature
+ "temperature": {
+	"critical-threshold": 80,
+	"format-critical": "T:{temperatureC}°C",
+	"format": "T:{temperatureC}°C"
  }
 }

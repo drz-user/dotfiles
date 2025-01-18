@@ -100,7 +100,7 @@ button:hover {
 	color: #ffffff; 
 }
 
-#cpu,#memory,#disk {
+#cpu,#memory,#disk,#temperature {
     min-width: 40px;
     font-size: 11px;
 }
@@ -246,11 +246,11 @@ label:focus {
 
 
 #temperature {
-    background-color: #f0932b;
+	margin-left: 8px;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    color: #ff0000;
 }
 
 #tray {

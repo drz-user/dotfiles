@@ -4,10 +4,10 @@
  	 "layer": "bottom",
 	 "position": "top",
 	 "height":32,
-	 "margin-left":1,
-	 "margin-right":1,
-	 "margin-top":1,
-	 "margin-bottom":1,
+	 "margin-left":2,
+	 "margin-right":2,
+	 "margin-top":2,
+	 "margin-bottom":2,
 	 "spacing":0,
 
    // Load Modules
@@ -17,6 +17,7 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/appmenu",
+	"group/hardware",
 	"wlr/taskbar",
 	"hyprland/window"
     ],
@@ -25,11 +26,10 @@
     ],
     "modules-right": [
 	"pulseaudio",
-	"network",
-	"bluetooth",
-	"battery",
-	"group/hardware",
 	"backlight",
+	"battery",
+	"bluetooth",
+	"network",
 	"clock",
 	"custom/exit"
     ],
@@ -38,6 +38,7 @@
     "group/hardware": {
 	    "orientation": "horizontal",
 	    "modules": [
+		    "temperature",
 		    "disk",
 		    "cpu",
 		    "memory"
