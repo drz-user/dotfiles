@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "CaskaydiaCove Nerd Font";
    /* font-size: 12px;*/
     transition-duration: 0;
 }
@@ -100,9 +100,13 @@ button:hover {
     font-size: 13px;
 }
 
-#cpu,#memory,#disk {
+#cpu,#memory,#disk, #temperature {
     min-width: 40px;
     font-size: 11px;
+}
+
+#temperature {
+	margin-left: 16px;
 }
 
 #network {
@@ -262,11 +266,10 @@ label:focus {
 
 
 #temperature {
-    background-color: #f0932b;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+	color: #ff0000;
 }
 
 #tray {

@@ -16,6 +16,7 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/appmenu",
+	"group/hardware",
 	"wlr/taskbar",
 	"hyprland/window"
     ],
@@ -24,11 +25,10 @@
     ],
     "modules-right": [
 	"pulseaudio",
-	"network",
-	"bluetooth",
-	"battery",
-	"group/hardware",
 	"backlight",
+	"battery",
+	"bluetooth",
+	"network",
 	"clock",
 	"custom/exit"
     ],
@@ -37,6 +37,7 @@
     "group/hardware": {
 	    "orientation": "horizontal",
 	    "modules": [
+		    "temperature",
 		    "disk",
 		    "cpu",
 		    "memory"

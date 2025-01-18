@@ -25,7 +25,7 @@
   // Backlight
   "backlight" : {
 	"device": "intel_backlight",
-	"format": "{icon}  {percent}%",
+	"format": "{icon} {percent}%",
 	"format-icons": ["<span color=\"#00ff00\">󰱊</span>","<span color =\"#4c4cff\">󰱌</span>"],
         "on-click": "kitty --class nmwui"
   },
@@ -100,18 +100,18 @@
 
   // CPU
   "cpu": {
-    "format": "C:{usage}% "
+    "format": " <span size='2pt'> </span>{usage}% "
   },
  
   // Memory
   "memory": {
-    "format": "M:{}% "
+    "format": " <span size='2pt'> </span>{}% "
   },
 
   // Harddisc space used
   "disk": {
     "interval": 30,
-    "format": "D:{percentage_used}% ",
+    "format": " <span size='2pt'> </span>{percentage_used}% ",
     "path": "/"
   },
 
@@ -119,11 +119,11 @@
   // Network
   "network": {
     "format": "{ifname}",
-    "format-wifi": "   {signalStrength}%",
+    "format-wifi": "󰖩 {signalStrength}%",
     "format-ethernet": "  {ifname}",
-    "format-disconnected": "Disconnected ⚠",
+    "format-disconnected": "󰖪",
     "tooltip-format": " {ifname} via {gwaddri}",
-    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-wifi": "󰖩 {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
@@ -138,19 +138,19 @@
       "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-charging": "󰻹  {capacity}%",
-    "format-plugged": "󰻹  {capacity}%",
+    "format-charging": "󰻹 {capacity}%",
+    "format-plugged": "󰻹 {capacity}%",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": ["󰴔 ", "󰋕 ", "󰛞 ", "󰋑 ", "󰩖 "],
+    "format-icons": ["󰴔", "󰋕", "󰛞", "󰋑", "󰩖"],
     "interval" : 3
   },
 
   // Pulseaudio
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{icon}   {volume}%",
-    "format-bluetooth": "{icon}  {volume}%",
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
     "format-bluetooth-muted": "{icon} ",
     "format-muted": " ",
     "format-source": "{volume}% ",
@@ -174,5 +174,13 @@
     "format-off": "󰂲",
     "interval": 30,
     "on-click": "kitty --class nmwui bluetoothctl"
+ },
+
+
+ // Temperature
+ "temperature": {
+	"critical-threshold": 80,
+	"format-critical": "<span size='2pt'> </span>{temperatureC}°C",
+	"format": "<span size='2pt'> </span>{temperatureC}°C"
  }
 }
