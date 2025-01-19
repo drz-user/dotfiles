@@ -96,7 +96,7 @@ while read -rsn1 ui; do
     esac
 done
 
-git checkout ${themes[$choice]}
+git checkoutdd ${themes[$choice]}
 
 printf '\e[?1049l'
 printf '\e[?25h'
