@@ -1,49 +1,44 @@
 #!/bin/bash
 
-n=4 #number of themes
+#read themes from config file
+themes=()
+
+while read line; do
+	themes+=($line)
+done < ~/.config/themeSwitcher/themes.conf
+
+n=${#themes[@]}
+
+k=$(8-$n) #add empty strings at the end of themes
+
+for i in $(seq 1 $k); do
+	themes+=" "
+done
 
 printf '\e[?1049h'
 printf '\e[?25l'
 clear
 
-echo -e "   \u250C              \u2510"
-echo -e "     Choose theme"
-echo -e "   \u2514              \u2518"
-echo -e "                      "
-echo -e " \u2502 master            "
-echo -e " \u2502 cornflower        "
-echo -e " \u2502 khrushchevka      "
-echo -e " \u2502 synth             "
-echo -e " \u2502                   "
-echo -e " \u2502                   "
-echo -e " \u2502                   "
-echo -e " \u2502                   "
+printf "   \u250C              \u2510\n     Choose theme\n   \u2514              \u2518\n\n"
+
+for i in {0..8}; do
+	printf " \u2502 ${themes[$i]}\n"
+done
+
 
 choice=0
 
 branch="$(git rev-parse --abbrev-ref HEAD)"
 
+for i in ${!themes[@]}; do
+       if [[ "${themes[$i]}" = "$branch" ]]; then
+	       choice=$i;
+       fi
+done
 
-case "$branch" in
-	"master")
-		choice=0;;
-	"cornflower")
-		choice=1;;
-	"khrushchevka")
-		choice=2;;
-	"synth")
-		choice=3;;
-esac
+printf "\e[%d;4H> ${themes[$choice]}" $((5+$choice)) 
 
-if [[ choice -eq 0 ]]; then
-	echo -e -n "\e[5;4H> master\e[0m"
-elif [[ choice -eq 1 ]]; then
-	echo -e -n "\e[6;4H> cornflower\e[0m"
-elif [[ choice -eq 2 ]]; then
-	echo -e -n "\e[7;4H> khrushchevka\e[0m"
-elif [[ choice -eq 3 ]]; then
-	echo -e -n "\e[8;4H> synth\e[0m"
-fi
+#echo -e -n "\e[5;4H> $branch\e[0m"
 
 while read -rsn1 ui; do
 
@@ -61,20 +56,11 @@ while read -rsn1 ui; do
 		choice=$(( ((($choice-1) % $n) + $n) % $n  ));;
             esac
 	    
-	    echo -e -n "\e[5;4Hmaster  \e[0m"
-	    echo -e -n "\e[6;4Hcornflower  \e[0m"
-	    echo -e -n "\e[7;4Hkhrushchevka  \e[0m"
-	    echo -e -n "\e[8;4Hsynth  \e[0m"
-	    
-	    if [[ choice -eq 0 ]]; then
-		    echo -e -n "\e[5;4H> master\e[0m"
-	    elif [[ choice -eq 1 ]]; then
-		    echo -e -n "\e[6;4H> cornflower\e[0m"
-	    elif [[ choice -eq 2 ]]; then
-		    echo -e -n "\e[7;4H> khrushchevka\e[0m"
-	    elif [[ choice -eq 3 ]]; then
-		    echo -e -n "\e[8;4H> synth\e[0m"
-	    fi
+	    for i in {0..8}; do
+		    printf "\e[%d;4H${themes[$i]}  " $((5+$i))
+	    done
+
+	    printf "\e[%d;4H> ${themes[$choice]}" $((5+$choice))
 
         fi
         # Flush "stdin" with 0.1  sec timeout.
@@ -90,16 +76,7 @@ while read -rsn1 ui; do
     esac
 done
 
-case $choice in
-	0)
-		git checkout master;;
-	1)
-		git checkout cornflower;;
-	2)
-		git checkout khrushchevka;;
-	3)
-		git checkout synth;;
-esac
+git checkout ${themes[$choice]}
 
 printf '\e[?1049l'
 printf '\e[?25h'
