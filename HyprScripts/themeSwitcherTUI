@@ -1,6 +1,7 @@
 #!/bin/bash
 
 n=4 #number of themes
+themes=("master" "cornflower" "khrushchevka" "synth")
 
 printf '\e[?1049h'
 printf '\e[?25l'
@@ -90,16 +91,7 @@ while read -rsn1 ui; do
     esac
 done
 
-case $choice in
-	0)
-		git checkout master;;
-	1)
-		git checkout cornflower;;
-	2)
-		git checkout khrushchevka;;
-	3)
-		git checkout synth;;
-esac
+git checkout ${themes[$choice]}
 
 printf '\e[?1049l'
 printf '\e[?25h'
