@@ -1,7 +1,12 @@
 #!/bin/bash
 
-n=4 #number of themes
-themes=("master" "cornflower" "khrushchevka" "synth")
+#read themes from config file
+themes=()
+
+while IFS=$'\n' read -a config
+do
+	themes+=(${config})
+done < ~/.config/themeSwitcher/themes.conf
 
 printf '\e[?1049h'
 printf '\e[?25l'
