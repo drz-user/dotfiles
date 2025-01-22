@@ -1,5 +1,17 @@
 # settings
 
+(GimpGegl-gegl-vignette-config "2025-01-22 11:08:17"
+    (time 1737540497)
+    (shape square)
+    (color (color-rgba 0 0 0 1))
+    (radius 0.97265031473844155)
+    (softness 0.79487745639213969)
+    (gamma 0.81010574170606953)
+    (proportion 1)
+    (squeeze 0.020735363065394145)
+    (x 0.5)
+    (y 0.5)
+    (rotation 0))
 (GimpGegl-gegl-vignette-config "2024-12-31 00:05:59"
     (time 1735599959)
     (gimp-mode normal)
