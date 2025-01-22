@@ -20,3 +20,7 @@
 /.config/libreoffice/
 /.config/libreoffice/**
 /.config/btop/btop.log
+/.config/GIMP/
+/.config/GIMP/**
+/.config/etr/
+/.config/etr/**
