@@ -16,6 +16,7 @@
 !/Wallpapers/
 !/Wallpapers/**
 
-#Ignore LIbreOFFICE
+#Still ignore these tho
 /.config/libreoffice/
 /.config/libreoffice/**
+/.config/btop/btop.log
