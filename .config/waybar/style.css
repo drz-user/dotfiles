@@ -105,22 +105,37 @@ button:hover {
     font-size: 11px;
 }
 
-#network {
+#battery,
+#backlight,
+#pulseaudio {
+    margin: 0 0px;
     min-width: 56px;
+    box-shadow: 0 0 0 2 #595959;
+}
+
+#network,
+#bluetooth {
+    box-shadow: 0 0 0 2 #595959;
+    min-width: 32px;
 }
 
 #clock {
-    min-width: 56px;
+    box-shadow: 0 0 0 2 #595959;
+    min-width: 64px;
 }
+
 
 #bluetooth {
     font-size: 15px;
-    min-width: 16px;
 }
 
-#window,
+#window {
+    margin: 0 4px;
+}
+
 #workspaces {
     margin: 0 4px;
+    box-shadow: 0 0 0 2 #595959;
 }
 
 #window {
@@ -131,6 +146,7 @@ button:hover {
     padding-left:0px; 
     font-size: 20px;
     min-width: 32px;
+    box-shadow: 0 0 0 2 #595959;
 }
 
 #taskbar {
@@ -152,15 +168,6 @@ button:hover {
     margin-right: 0;
 }
 
-
-#battery {
-    min-width: 56px;
-}
-
-#backlight {
-    min-width: 56px;
-
-}
 
 #battery.charging, #battery.plugged {
     color: #00ff00;
@@ -184,9 +191,10 @@ button:hover {
 }
 
 #custom-exit {
-    padding-right: 12px;
+    padding-right: 6px;
     font-size: 15px;
-    min-width: 16px;
+    min-width: 32px;
+    box-shadow: 0 0 0 2 #595959;
 }
 
 #power-profiles-daemon.performance {
@@ -212,7 +220,9 @@ label:focus {
 }
 
 #memory {
+    border-right: 2px solid #595959;
 }
+
 
 #disk {
 }
@@ -226,9 +236,6 @@ label:focus {
 #network.disconnected {
 }
 
-#pulseaudio {
-    min-width: 32px;
-}
 
 #pulseaudio.muted {
 }
