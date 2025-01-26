@@ -1,10 +1,12 @@
 base
 base-devel
+batsignal
 bluez
 bluez-utils
 brightnessctl
 btop
 ctpv-git
+dosfstools
 efibootmgr
 extremetuxracer
 fastfetch
@@ -20,6 +22,7 @@ intel-ucode
 jre-openjdk
 kitty
 lf
+libnotify
 libreoffice-still
 linux
 linux-firmware
@@ -31,6 +34,7 @@ ncpamixer
 neovim
 network-manager-applet
 networkmanager
+ntfs-3g
 pcmanfm-gtk3
 pipewire
 pipewire-audio
@@ -38,12 +42,15 @@ protontricks
 sddm
 sddm-sugar-dark
 slurp
+starship
 steam
 swaylock-effects
+swaync
 thefuck
 trash-cli
 ttf-cascadia-code-nerd
 ttf-font-awesome
+ttf-sharetech-mono-nerd
 unzip
 uwsm
 vi
