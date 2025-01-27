@@ -31,7 +31,7 @@ button {
     /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
-    font-size: 12px;
+    font-size: 18px;
     color: #89befb;
 }
 
@@ -39,7 +39,7 @@ button {
 button:hover {
     background: inherit;
     text-shadow: inherit;
-    font-size: 15px;
+    font-size: 22px;
     color: #89befb;
 
 }
@@ -50,7 +50,7 @@ button:hover {
 #battery:hover,
 #clock:hover,
 #backlight:hover {
-   font-size: 15px;
+   font-size: 22px;
 }
 
 #workspaces button {
@@ -71,7 +71,7 @@ button:hover {
 
 #workspaces button.active {
     box-shadow: inset 0 -2px #aa8a02;
-    font-size: 15px;
+    font-size: 22px;
 
 }
 
@@ -97,12 +97,12 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    font-size: 13px;
+    font-size: 19px;
 }
 
 #cpu,#memory,#disk, #temperature {
-    min-width: 40px;
-    font-size: 11px;
+    min-width: 60px;
+    font-size: 16px;
 }
 
 #temperature {
@@ -110,45 +110,46 @@ button:hover {
 }
 
 #network {
-    min-width: 56px;
+    min-width: 84px;
 }
 
 #clock {
-    min-width: 56px;
+    min-width: 84px;
 }
 
 #bluetooth {
-    font-size: 15px;
     color: #0082FC;
-    min-width: 16px;
+    font-size: 22px;
+    min-width: 24px;
 }
 
 #bluetooth:hover {
-    font-size: 19px;
+    font-size: 28px;
 }
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 6px;
 }
 
 #window {
-    font-size: 12px;
-}
-
-#custom-appmenu {
-    padding-left:12px; 
-    font-size: 16px;
-    color: #c19d67;
-    min-width: 16px;
-}
-#custom-appmenu:hover {
     font-size: 18px;
 }
 
+#custom-appmenu {
+    padding-left:18px;
+    margin-right: 12px; 
+    font-size: 24px;
+    color: #c19d67;
+    min-width: 32px;
+}
+#custom-appmenu:hover {
+    font-size: 36px;
+}
+
 #taskbar {
-    margin-right: 8px;
-    margin-left: 16px;
+    margin-right: 18px;
+    margin-left: 36px;
 }
 
 #taskbar button {
@@ -168,13 +169,12 @@ button:hover {
 
 #battery {
     color: #ff7676;
-    min-width: 56px;
+    min-width: 84px;
 }
 
 #backlight {
     color: #b37dec;
-    min-width: 56px;
-
+    min-width: 84px;
 }
 
 #battery.charging, #battery.plugged {
@@ -199,10 +199,10 @@ button:hover {
 }
 
 #custom-exit {
-    padding-right: 12px;
     color: #b25b6e;
-    font-size: 15px;
-    min-width: 16px;
+    padding-right: 18px;
+    font-size: 22px;
+    min-width: 24px;
 }
 
 #custom-exit:hover {
@@ -247,7 +247,7 @@ label:focus {
 }
 
 #pulseaudio {
-    min-width: 32px;
+    min-width: 48px;
 }
 
 #pulseaudio.muted {
