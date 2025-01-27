@@ -31,7 +31,7 @@ button {
     /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
-    font-size: 12px;
+    font-size: 18px;
     color: #89befb;
 }
 
@@ -39,7 +39,7 @@ button {
 button:hover {
     background: inherit;
     text-shadow: inherit;
-    font-size: 15px;
+    font-size: 22px;
     color: #89befb;
 
 }
@@ -50,7 +50,7 @@ button:hover {
 #battery:hover,
 #clock:hover,
 #backlight:hover {
-   font-size: 15px;
+   font-size: 22px;
 }
 
 #workspaces button {
@@ -71,7 +71,7 @@ button:hover {
 
 #workspaces button.active {
     box-shadow: inset 0 -2px #aa8a02;
-    font-size: 15px;
+    font-size: 22px;
 
 }
 
@@ -97,58 +97,58 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    font-size: 13px;
+    font-size: 19px;
 }
 
 #cpu,#memory,#disk,#temperature {
-    font-size: 12px;
-    min-width: 40px; 
+    font-size: 18px;
+    min-width: 60px; 
 }
 
 #temperature {
-	margin-left: 16px;
+	margin-left: 24px;
 }
 
 #network {
-    min-width: 24px;
+    min-width: 32px;
     color: #df9dc3;
 }
 
 #clock {
-    min-width: 56px;
+    min-width: 84px;
     color : #f222ff;
 }
 
 #bluetooth {
-    font-size: 15px;
+    font-size: 22px;
     color: #0082FC;
-    min-width: 16px;
+    min-width: 24px;
 }
 
 #bluetooth:hover {
-    font-size: 19px;
+    font-size: 28px;
 }
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 6px;
 }
 
 #window {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 #custom-appmenu {
-    font-size: 24px;
+    font-size: 36px;
     color: #8c1eff;
-    min-width: 32px;
+    min-width: 48px;
 }
 #custom-appmenu:hover {
-    font-size: 28px;
+    font-size: 40px;
 }
 
 #taskbar {
-    margin-right: 8px;
+    margin-right: 12px;
 }
 
 #taskbar button {
@@ -168,13 +168,12 @@ button:hover {
 
 #battery {
     color: #ff71ce;
-    min-width: 48px;
+    min-width: 72px;
 }
 
 #backlight {
     color: #fffb96;
-    min-width: 48px;
-
+    min-width: 72px;
 }
 
 #battery.charging, #battery.plugged {
@@ -199,10 +198,10 @@ button:hover {
 }
 
 #custom-exit {
-    padding-right: 12px;
     color: #b25b6e;
-    font-size: 15px;
-    min-width: 16px;
+    padding-right: 18px;
+    font-size: 22px;
+    min-width: 24px;
 }
 
 #custom-exit:hover {
