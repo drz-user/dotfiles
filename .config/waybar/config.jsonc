@@ -1,5 +1,5 @@
 // -*- mode: jsonc -*-
-{
+[{
    // General Config
  	 "layer": "bottom",
 	 "position": "top",
@@ -9,6 +9,7 @@
 	 "margin-top":1,
 	 "margin-bottom":1,
 	 "spacing":0,
+	 "output":"eDP-1",
 
    // Load Modules
   	"include": ["/home/drz/.config/waybar/modules.json"], 
@@ -43,4 +44,29 @@
 		    "memory"
 	    ]
     }
-}
+}, {
+	"layer": "bottom",
+	"position": "bottom",
+	"height": 48,
+	"margin-left": 1,
+	"margin-right": 1,
+	"margin-top": 1,
+	"margin-bottom": 1,
+	"output": "HDMI-A-1",
+	"include": ["/home/drz/.config/waybar/modules.json"],
+	"modules-left": [
+		"custom/appmenu",
+		"wlr/taskbar",
+		"hyprland/window"
+	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"network",
+		"bluetooth",
+		"clock",
+		"custom/exit"
+	]
+}]
