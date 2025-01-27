@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
    // General Config
- 	 "layer": "top",
+ 	 "layer": "bottom",
 	 "height":32,
 	 "margin-left":2,
 	 "margin-right":2,
