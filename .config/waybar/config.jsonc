@@ -3,7 +3,7 @@
    // General Config
  	 "layer": "bottom",
 	 "position": "top",
-	 "height":32,
+	 "height":48,
 	 "margin-left":2,
 	 "margin-right":2,
 	 "margin-top":2,

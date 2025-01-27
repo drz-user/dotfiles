@@ -31,7 +31,7 @@ button {
     /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
-    font-size: 13px;
+    font-size: 19px;
     color: #999999;
 }
 
@@ -87,7 +87,7 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    font-size: 13px;
+    font-size: 19px;
 }
 
 #pulseaudio:hover,
@@ -101,57 +101,57 @@ button:hover {
 }
 
 #cpu,#memory,#disk,#temperature {
-    min-width: 40px;
-    font-size: 11px;
+    min-width: 60px;
+    font-size: 16px;
 }
 
 #battery,
 #backlight,
 #pulseaudio {
     margin: 0 0px;
-    min-width: 56px;
+    min-width: 84px;
     box-shadow: 0 0 0 2 #595959;
 }
 
 #network,
 #bluetooth {
     box-shadow: 0 0 0 2 #595959;
-    min-width: 32px;
+    min-width: 48px;
 }
 
 #clock {
     box-shadow: 0 0 0 2 #595959;
-    min-width: 64px;
+    min-width: 96px;
 }
 
 
 #bluetooth {
-    font-size: 15px;
+    font-size: 22px;
 }
 
 #window {
-    margin: 0 4px;
+    margin: 0 6px;
 }
 
 #workspaces {
-    margin: 0 4px;
+    margin: 0 6px;
     box-shadow: 0 0 0 2 #595959;
 }
 
 #window {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 #custom-appmenu {
     padding-left:0px; 
-    font-size: 20px;
-    min-width: 32px;
     box-shadow: 0 0 0 2 #595959;
+    font-size: 30px;
+    min-width: 48px;
 }
 
 #taskbar {
-    margin-right: 8px;
-    margin-left: 16px;
+    margin-right: 12px;
+    margin-left: 24px;
 }
 
 #taskbar button {
@@ -191,9 +191,9 @@ button:hover {
 }
 
 #custom-exit {
-    padding-right: 6px;
-    font-size: 15px;
-    min-width: 32px;
+    padding-right: 9px;
+    font-size: 22px;
+    min-width: 48px;
     box-shadow: 0 0 0 2 #595959;
 }
 
@@ -235,7 +235,6 @@ label:focus {
 
 #network.disconnected {
 }
-
 
 #pulseaudio.muted {
 }
