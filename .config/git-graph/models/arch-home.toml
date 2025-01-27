@@ -1,0 +1,89 @@
+# RegEx patterns for branch groups by persistence, from most persistent
+# to most short-leved branches. This is used to back-trace branches.
+# Branches not matching any pattern are assumed least persistent.
+persistence = [
+    '^(master|main|trunk)$', # Matches exactly `master` or `main`  or `trunk`
+    '^(cornflower|khrushchevka|synth)$',
+    '^(develop|dev)$',
+    '^feature.*$',     # Matches everything starting with `feature`
+    '^release.*$',
+    '^hotfix.*$',
+    '^bugfix.*$',
+]
+
+# RegEx patterns for visual ordering of branches, from left to right.
+# Here, `master`, `main` or `trunk` are shown left-most, followed by branches
+# starting with `hotfix` or `release`, followed by `develop` or `dev`.
+# Branches not matching any pattern (e.g. starting with `feature`)
+# are displayed further to the right.
+order = [
+    '^(cornflower)$',
+    '^(khrushchevka)$',
+    '^(synth)$',
+    '^(master|main|trunk)$',      # Matches exactly `master` or `main` or `trunk`
+    '^(hotfix|release).*$', # Matches everything starting with `hotfix` or `release`
+    '^(develop|dev)$',      # Matches exactly `develop` or `dev`
+]
+
+# Colors of branches in terminal output. 
+# For supported colors, see section Colors (below this listing).
+[terminal_colors]
+# Each entry is composed of a RegEx pattern and a list of colors that
+# will be used alternating (see e.g. `feature...`).
+matches = [
+    [
+	'^(cornflower)$',
+	['yellow'],
+    ],
+    [
+	'^(synth)$',
+	['bright_magenta'],
+    
+    ],
+    [
+	'^(khrushchevka)$',
+	['bright_black'],
+   
+    ],
+    [
+        '^(master|main|trunk)$',
+        ['bright_white'],
+    ],
+    [
+        '^(develop|dev)$',
+        ['bright_yellow'],
+    ],
+]
+# A list of colors that are used (alternating) for all branches
+# not matching any of the above pattern. 
+unknown = ['white','black']
+
+# Colors of branches in SVG output. 
+# Same structure as terminal_colors. 
+# For supported colors, see section Colors (below this listing).
+[svg_colors]
+matches = [
+    [
+	'^(cornflower)$',
+	['Gold'],
+    ],
+    [
+	'^(synth)$',
+	['DarkViolet'],
+    
+    ],
+    [
+	'^(khrushchevka)$',
+	['DimGray'],
+   
+    ],
+    [
+        '^(master|main|trunk)$',
+        ['Gainsboro'],
+    ],
+    [
+        '^(develop|dev)$',
+        ['yellow'],
+    ],
+]
+unknown = ['white','black']
