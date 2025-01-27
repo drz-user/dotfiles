@@ -11,6 +11,8 @@
 #Add the following folers
 !/.config/
 !/.config/**
+!/.sddm/
+!/.sddm/**
 !/HyprScripts/
 !/HyprScripts/**
 !/Wallpapers/
