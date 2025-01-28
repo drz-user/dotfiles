@@ -219,7 +219,7 @@ ShowTimePercent = no
 #
 # Example:    Theme = laras_theme
 #
-Theme = master_default 
+Theme = cornflower_default 
 
 # The theme used when running on an xterm.
 #
