@@ -1,21 +1,21 @@
 colordef cyan = 0 515 515
-colordef magenta = 0 0 0
+colordef black = 90 90 90
 
 background		= default	default 
 frame			= default	default
 window_title		= default	default
 directory		= default	default	bold
-selected_directory	= default	magenta	bold	
+selected_directory	= white		black	bold	
 playlist		= default	default	bold
-selected_playlist	= default	magenta	bold
+selected_playlist	= white		black	bold
 file			= default	default
-selected_file		= default	magenta 
+selected_file		= white		black 
 marked_file		= green		default	bold
 marked_selected_file	= green		default	bold
 info			= blue		default	bold
-selected_info		= blue		magenta	bold
+selected_info		= blue		black	bold
 marked_info		= blue		default	bold
-marked_selected_info	= blue		magenta	bold
+marked_selected_info	= blue		black	bold
 status			= default	default	bold
 title			= default	default
 state			= default	default	bold
