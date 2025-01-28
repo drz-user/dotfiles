@@ -17,7 +17,8 @@ button {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 25%;
-	margin: 64 0px;
+	margin: 192 0px;
+	font-size: 22px;
 }
 
 button:focus, button:active, button:hover {
