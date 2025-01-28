@@ -11,6 +11,8 @@
 #Add the following folers
 !/.config/
 !/.config/**
+!/.moc/
+!/.moc/**
 !/.sddm/
 !/.sddm/**
 !/HyprScripts/
