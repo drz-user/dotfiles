@@ -1,5 +1,5 @@
 colordef cyan = 0 515 515
-colordef magenta = 230 230 230
+colordef magenta = 0 0 0
 
 background		= default	default 
 frame			= default	default
