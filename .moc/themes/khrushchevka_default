@@ -1,4 +1,5 @@
 colordef cyan = 0 515 515
+colordef black = 90 90 90
 
 background		= default	default 
 frame			= default	default
