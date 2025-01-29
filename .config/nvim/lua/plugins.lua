@@ -22,8 +22,19 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
-    "romainl/apprentice", --colorscheme
-
+    -- colorschemes
+    "romainl/apprentice",
+    {
+        "scottmckendry/cyberdream.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function ()
+            require("cyberdream").setup({
+                transparent = true,
+            })
+        end,
+    },
+    "rebelot/kanagawa.nvim",
     -- Vscode-like pictograms
 	{
 		"onsails/lspkind.nvim",
@@ -52,6 +63,16 @@ require("lazy").setup({
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
-    -- Toggleterm (for lf integration)
-    {'akinsho/toggleterm.nvim', version = '*', config = true}
+    -- Nvim-tree
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+        config = function()
+            require("nvim-tree").setup {}
+        end,
+}
 })
