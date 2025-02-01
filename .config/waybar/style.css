@@ -67,7 +67,6 @@ button:hover {
 }
 
 #workspaces button.active {
-    font-size: 24px;
     color: #aa8a02;
 }
 
@@ -86,11 +85,103 @@ button:hover {
 #custom-exit,
 #clock {
     padding: 0 12px;
-    margin: 0 2px;
-    background-color: rgba(56, 34, 15, 0.3);
+    margin: 0 0px;
     border: 2px solid rgba(255, 0, 193, 0.5);
-    border-radius: 24px;
+    border-radius: 16px;
 }
+
+#custom-appmenu { 
+    background: linear-gradient(
+        0deg, 
+        rgba(50,16,180,0.8) 0%, 
+        rgba(90, 16, 10, 0.8) 24%,
+        rgba(90, 16, 10, 0.8) 67%,
+        rgba(0, 0, 0, 0.8) 100%
+    ); 
+}
+#hardware { 
+    background: linear-gradient(
+        0deg, 
+        rgba(50,16,180,0.8) 0%, 
+        rgba(80, 16, 20, 0.8) 24%,
+        rgba(80, 16, 20, 0.8) 67%,
+        rgba(0, 0, 0, 0.8) 100%
+    ); 
+}
+#taskbar { 
+    background: linear-gradient(
+        0deg, 
+        rgba(50,16,180,0.8) 0%, 
+        rgba(70, 16, 30, 0.8) 24%,
+        rgba(70, 16, 30, 0.8) 67%,
+        rgba(0, 0, 0, 0.8) 100%
+    ); 
+}
+#window { 
+    background: linear-gradient(
+        0deg, 
+        rgba(50,16,180,0.8) 0%, 
+        rgba(60, 16, 40, 0.8) 24%,
+        rgba(60, 16, 40, 0.8) 67%,
+        rgba(0, 0, 0, 0.8) 100%
+    ); 
+}
+#workspaces { 
+    background: linear-gradient(
+        0deg, 
+        rgba(115,16,115,0.8) 0%, 
+        rgba(50, 16, 50, 0.8) 24%,
+        rgba(50, 16, 50, 0.8) 67%,
+        rgba(0, 0, 0, 0.8) 100%
+    ); 
+}
+#levels { 
+    background: linear-gradient(
+        0deg, 
+        rgba(150,16,50,0.8) 0%, 
+        rgba(40, 16, 60, 0.8) 24%,
+        rgba(40, 16, 60, 0.8) 67%,
+        rgba(0, 0, 0, 0.8) 100%
+    ); 
+}
+#connection, #infhdmi { 
+    background: linear-gradient(
+        0deg, 
+        rgba(150,16,50,0.8) 0%, 
+        rgba(30, 16, 70, 0.8) 24%,
+        rgba(30, 16, 70, 0.8) 67%,
+        rgba(0, 0, 0, 0.8) 100%
+    ); 
+}
+#clock { 
+    background: linear-gradient(
+        0deg, 
+        rgba(150,16,50,0.8) 0%, 
+        rgba(20, 16, 80, 0.8) 24%,
+        rgba(20, 16, 80, 0.8) 67%,
+        rgba(0, 0, 0, 0.8) 100%
+    ); 
+}
+#custom-exit { 
+    background: linear-gradient(
+        0deg, 
+        rgba(150,16,50,0.8) 0%, 
+        rgba(10, 16, 90, 0.8) 24%,
+        rgba(10, 16, 90, 0.8) 67%,
+        rgba(0, 0, 0, 0.8) 100%
+    ); 
+}
+
+#taskbar.empty,
+window#waybar.empty #window { 
+    border : none;
+    background-color: transparent;
+    min-width: 0px;
+    padding: 0 0px;
+    margin: 0 0px;
+}
+
+
 
 #clock,
 #disk,
@@ -146,10 +237,9 @@ button:hover {
     color: #8c1eff;
     min-width: 56px;
     padding-right: 8px;
-    margin: 0 2px;
-    background-color: rgba(56, 34, 15, 0.3);
+    margin: 0 0px;
     border: 2px solid rgba(255, 0, 193, 0.5);
-    border-radius: 24px;
+    border-radius: 16px;
 
 }
 #custom-appmenu:hover {
@@ -332,4 +422,13 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+/* extra round corners ;) */
+#custom-appmenu, #hardware, #taskbar, #window, #workspaces {
+    border-bottom-right-radius: 48px;
+    border-top-left-radius: 48px;
+}
+#infhdmi, #levels, #connection, #clock, #custom-exit, #workspaces {
+    border-top-right-radius: 48px;
+    border-bottom-left-radius: 48px;
 }
