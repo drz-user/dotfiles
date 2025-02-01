@@ -213,6 +213,10 @@ window#waybar.empty #window {
     color: #df9dc3;
 }
 
+#window {
+    min-width: 24px;
+}
+
 #clock {
     min-width: 64px;
     color : #f222ff;
