@@ -26,11 +26,8 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
-	"pulseaudio",
-	"backlight",
-	"battery",
-	"bluetooth",
-	"network",
+	"group/levels",
+    "group/connection",
 	"clock",
 	"custom/exit"
     ],
@@ -44,6 +41,21 @@
 		    "cpu",
 		    "memory"
 	    ]
+    },
+    "group/levels": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "backlight",
+            "battery"
+        ]
+    },
+    "group/connection": {
+        "orientation": "horizontal",
+        "modules": [
+            "bluetooth",
+            "network"
+        ]
     }
 }, {
 	"layer": "bottom",
@@ -65,9 +77,16 @@
 	],
 	"modules-right": [
 		"pulseaudio",
-		"network",
-		"bluetooth",
+		"group/infhdmi",
 		"clock",
 		"custom/exit"
-	]
+	],
+    "group/infhdmi": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "bluetooth",
+            "network"
+        ]
+    }
 }]
