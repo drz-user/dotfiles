@@ -29,11 +29,13 @@ linux-firmware
 man-db
 man-pages
 minecraft-launcher
-nano
+moc-pulse
+mupdf
 ncpamixer
 neovim
 network-manager-applet
 networkmanager
+npm
 ntfs-3g
 pcmanfm-gtk3
 pipewire
@@ -53,8 +55,6 @@ ttf-font-awesome
 ttf-sharetech-mono-nerd
 unzip
 uwsm
-vi
-vim
 waybar
 wf-recorder
 wireplumber
