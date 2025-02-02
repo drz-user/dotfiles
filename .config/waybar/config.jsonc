@@ -76,7 +76,6 @@
 		"hyprland/workspaces"
 	],
 	"modules-right": [
-		"pulseaudio",
 		"group/infhdmi",
 		"clock",
 		"custom/exit"
