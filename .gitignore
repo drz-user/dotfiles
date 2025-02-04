@@ -21,10 +21,9 @@
 !/Wallpapers/**
 
 #Still ignore these tho
-/.config/libreoffice/
-/.config/libreoffice/**
+/.config/blender/
 /.config/btop/btop.log
+/.config/ctpv
 /.config/GIMP/
-/.config/GIMP/**
 /.config/etr/
-/.config/etr/**
+/.config/libreoffice/
