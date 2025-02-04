@@ -1,15 +1,15 @@
-@define-color noti-border-color rgba(255, 255, 255, 0.15);
-@define-color noti-bg rgba(27, 31, 38, 1);
-@define-color noti-bg-alt rgba(33, 37, 44, 0.9);
-@define-color noti-fg #E5E9F0;
-@define-color noti-bg-hover #81A1C1;
-@define-color noti-bg-focus #A3BE8C;
+@define-color noti-border-color rgba(255, 100, 255, 0.15);
+@define-color noti-bg rgba(27, 0, 38, 0.5);
+@define-color noti-bg-alt rgba(33, 0, 44, 0.75);
+@define-color noti-fg #d0c0FF;
+@define-color noti-bg-hover #4565ef;
+@define-color noti-bg-focus #4565ef;
 @define-color noti-close-bg rgba(255, 255, 255, 0.1);
 @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
 @define-color noti-urgent #BF616A;
-@define-color bg-checked #0040c0; 
-@define-color border-color #595959;
-@define-color bg-selected rgb(0, 128, 255);
+@define-color bg-checked #7005a0; 
+@define-color border-color #854095;
+@define-color bg-selected rgb(0, 0, 100);
 
 *{
   color: @noti-fg;
@@ -17,7 +17,7 @@
 }
 
 .window {
-  border-radius: 0px;
+  border-radius: 9px;
   border: 2px solid  @border-color
 }
 .notification-row {
@@ -30,10 +30,8 @@
 }
 
 .notification {
-  border-radius: 0px;
+  border-radius: 9px;
   margin: 6px 12px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.7),
-    0 2px 6px 2px rgba(0, 0, 0, 0.3);
   padding: 0;
 }
 
@@ -52,14 +50,14 @@
 .critical {
   background: @noti-urgent;
   padding: 2px;
-  border-radius: 0px;
+  border-radius: 9px;
 }
 
 
 .notification-content {
   background: transparent;
   padding: 6px;
-  border-radius: 0px;
+  border-radius: 9px;
 }
 
 .close-button {
@@ -67,7 +65,7 @@
   color: white;
   text-shadow: none;
   padding: 0;
-  border-radius: 0%;
+  border-radius: 100%;
   margin-top: 10px;
   margin-right: 16px;
   box-shadow: none;
@@ -100,17 +98,17 @@
 }
 
 .notification-default-action {
-  border-radius: 0px;
+  border-radius: 9px;
 }
 
 /* When alternative actions are visible */
 .notification-default-action:not(:only-child) {
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
 }
 
 .notification-action {
-  border-radius: 0px;
+  border-radius: 9px;
   border-top: none;
   border-right: none;
 }
@@ -130,7 +128,7 @@
 .body-image {
   margin-top: 6px;
   background-color: white;
-  border-radius: 0px;
+  border-radius: 9px;
 }
 
 .summary {
@@ -166,8 +164,11 @@
 
 .control-center {
   background-color: @noti-bg-alt;
-  border-radius: 0px;
-  border: 2px solid  @border-color
+  border-radius: 9px;
+  border: 2px solid  @border-color;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
 }
 
 .control-center-list {
@@ -180,7 +181,6 @@
 
 /* Window behind control center and on all other monitors */
 .blank-window {
-  background: transparent;
 }
 
 /*** Widgets ***/
@@ -198,7 +198,7 @@
   background: @noti-bg;
   border: 1px solid @noti-border-color;
   box-shadow: none;
-  border-radius: 0px;
+  border-radius: 9px;
 }
 
 .widget-title>button:hover {
@@ -213,7 +213,7 @@
 
 .widget-dnd>switch {
   font-size: initial;
-  border-radius: 0px;
+  border-radius: 12px;
   background: @noti-bg;
   border: 1px solid @noti-border-color;
   box-shadow: none;
@@ -225,7 +225,7 @@
 
 .widget-dnd>switch slider {
   background: @noti-bg-hover;
-  border-radius: 0px;
+  border-radius: 12px;
 }
 
 /* Label widget */
@@ -262,27 +262,27 @@
   background-color: @noti-bg;
   padding: 4px 8px 8px 8px;
   margin: 0px 8px 8px 8px;
-  border-radius: 0px;
+  border-radius: 9px;
 }
 
 .widget-backlight {
   background-color: @noti-bg;
   padding: 8px 8px 4px 8px;
   margin: 8px 8px 0px 8px;
-  border-radius: 0px;
+  border-radius: 9px;
 }
 
 .KB {
   padding: 4px 8px 4px 8px;
   margin: 0px 8px 0px 8px;
-  border-radius: 0;
+  border-radius: 7;
 }
 
 .power-buttons{
   background-color: @noti-bg;
   padding: 8px;
   margin: 8px;
-  border-radius: 0px;
+  border-radius: 9px;
 }
 
 
@@ -308,14 +308,16 @@
 .widget-buttons-grid{
   padding: 8px;
   margin: 8px;
-  border-radius: 0px;
+  border-radius: 9px;
   background-color: @noti-bg;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button{
   background: @noti-bg;
-  border-radius: 0px;
+  border-radius: 9px;
   min-width: 52px;
+  border: 1px solid @border-color;
+  box-shadow: none;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:checked {
@@ -330,7 +332,7 @@
   background-color: @noti-bg;
   padding: 8px;
   margin: 8px;
-  border-radius: 0px;
+  border-radius: 9px;
 }
 
 .powermode-buttons>button {
