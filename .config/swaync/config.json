@@ -74,32 +74,32 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "",
-          "type": "toggle",
-          "active": true,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
-          "update_command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+            "label": "",
+            "type": "toggle",
+            "active": true,
+            "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
+            "update-command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
         },
         {
             "label": "󰂯",
             "type": "toggle",
             "active": true,
             "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && bluetoothctl power on || bluetoothctl power off'",
-            "update_command": "sh -c '[[ $(bluetoothctl show | grep -o \"yes\") == \"yes\" ]] && echo true || echo false'"
+            "update-command": "sh -c '[[ $(bluetoothctl show | grep -o \"yes\") == \"yes\" ]] && echo true || echo false'"
         },
         {
             "label": "",
             "type": "toggle",
             "active": true,
             "command":"sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && pactl set-sink-mute @DEFAULT_SINK@ false || pactl set-sink-mute @DEFAULT_SINK@ true'",
-            "update_command": "sh -c '[[ $(pactl get-sink-mute @DEFAULT_SINK@ | grep -o \"no\") == \"no\" ]] && echo true || echo false'"
+            "update-command": "sh -c '[[ $(pactl get-sink-mute @DEFAULT_SINK@ | grep -o \"no\") == \"no\" ]] && echo true || echo false'"
         },
         {
             "label": "󰍬",
             "type": "toggle",
             "active": false,
             "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && pactl set-source-mute @DEFAULT_SOURCE@ false || pactl set-source-mute @DEFAULT_SOURCE@ true'",
-            "update_command": "sh -c '[[ $(pactl get-source-mute @DEFAULT_SOURCE@ | grep -o \"no\") == \"no\" ]] && echo true || echo false'"
+            "update-command": "sh -c '[[ $(pactl get-source-mute @DEFAULT_SOURCE@ | grep -o \"no\") == \"no\" ]] && echo true || echo false'"
         },
         {
             "label": "󰌾",
