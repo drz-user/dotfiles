@@ -3,7 +3,7 @@
 # Branches not matching any pattern are assumed least persistent.
 persistence = [
     '^(master|main|trunk)$', # Matches exactly `master` or `main`  or `trunk`
-    '^(cornflower|khrushchevka|synth)$',
+    '^(cornflower|lucy|synth)$',
     '^(develop|dev)$',
     '^feature.*$',     # Matches everything starting with `feature`
     '^release.*$',
@@ -18,7 +18,7 @@ persistence = [
 # are displayed further to the right.
 order = [
     '^(cornflower)$',
-    '^(khrushchevka)$',
+    '^(lucy)$',
     '^(synth)$',
     '^(master|main|trunk)$',      # Matches exactly `master` or `main` or `trunk`
     '^(hotfix|release).*$', # Matches everything starting with `hotfix` or `release`
@@ -41,8 +41,8 @@ matches = [
     
     ],
     [
-	'^(khrushchevka)$',
-	['bright_black'],
+	'^(lucy)$',
+	['bright_green'],
    
     ],
     [
@@ -73,8 +73,8 @@ matches = [
     
     ],
     [
-	'^(khrushchevka)$',
-	['DimGray'],
+	'^(lucy)$',
+	['Chartreuse'],
    
     ],
     [
