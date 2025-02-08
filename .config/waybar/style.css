@@ -83,7 +83,7 @@ button:hover {
 
 #custom-appmenu,#hardware,#taskbar,#window,#workspaces,#pulseaudio,#backlight,#battery,#bluetooth,#network,#clock,#custom-exit {
     margin: 0 2px;
-    background: rgba(50, 0, 51, 0.6);
+    background: rgba(50, 0, 51, 0.75);
 }
 
 #hardware,
@@ -176,11 +176,6 @@ window#waybar.empty #window {
 #cpu,#memory,#disk,#temperature {
     font-size: 15px;
     min-width: 64px; 
-}
-
-#network {
-    min-width: 32px;
-    color: #df9dc3;
 }
 
 #window {
