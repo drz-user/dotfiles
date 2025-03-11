@@ -1,6 +1,7 @@
 base
 base-devel
 batsignal
+blender
 bluez
 bluez-utils
 brightnessctl
@@ -30,6 +31,7 @@ man-db
 man-pages
 minecraft-launcher
 moc-pulse
+mtools
 mupdf
 ncpamixer
 neovim
@@ -37,10 +39,12 @@ network-manager-applet
 networkmanager
 npm
 ntfs-3g
+otf-opendyslexic-nerd
 pcmanfm-gtk3
 pipewire
 pipewire-audio
 protontricks
+repetier-host
 sddm
 sddm-sugar-dark
 slurp
@@ -63,3 +67,4 @@ wlogout
 wofi
 xdg-desktop-portal-hyprland
 yay
+zip
