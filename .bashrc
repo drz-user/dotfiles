@@ -13,3 +13,9 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 eval $(thefuck --alias)
+
+lfcd () {
+	cd "$(command lf -print-last-dir "$@")"
+}
+
+alias lf="lfcd"

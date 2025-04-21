@@ -34,3 +34,5 @@
 /.config/menus/
 /.config/pulse/
 /.config/yay/
+/.config/VirtualBox/
+/.config/qBittorrent/
