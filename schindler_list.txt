@@ -7,12 +7,16 @@ bluez
 bluez-utils
 brightnessctl
 btop
+checksec
+croc
 ctpv-git
 dosfstools
 efibootmgr
+expect
 extremetuxracer
 fastfetch
 firefox
+gdb
 gimp
 git
 git-graph
@@ -23,6 +27,7 @@ hyprland
 hyprpaper
 inetutils
 intel-ucode
+isoimagewriter
 jre-openjdk
 kitty
 lf
@@ -34,14 +39,18 @@ man-db
 man-pages
 minecraft-launcher
 moc-pulse
+mpv
 mtools
 mupdf
 ncpamixer
 neovim
 network-manager-applet
 networkmanager
+nmap
 npm
 ntfs-3g
+openvpn
+openvpn-update-systemd-resolved
 otf-opendyslexic-nerd
 pcmanfm-gtk3
 pipewire
@@ -55,6 +64,7 @@ python-pyqt5
 python-scikit-learn
 python-scipy
 python-setuptools-scm
+qbittorrent
 repetier-host
 sddm
 sddm-sugar-dark
@@ -65,6 +75,7 @@ steam
 strace
 swaylock-effects
 swaync
+systemd-resolvconf
 tcpdump
 thefuck
 trash-cli
@@ -73,6 +84,7 @@ ttf-font-awesome
 ttf-sharetech-mono-nerd
 unzip
 uwsm
+virtualbox
 waybar
 wf-recorder
 wireplumber
