@@ -1,0 +1,102 @@
+#!/bin/bash
+
+#get available clients
+clients=()  #full-path client files
+names=()    #readable, user-friendly names
+file_path="/etc/openvpn/client"
+lim=20
+
+
+for f in "$file_path"/*; do
+    clients+=($f)
+    filename="${f##*/}" #remove filepath
+    filename="${filename%%.*}" #remove extension
+    filename="${filename^^}" #put into caps
+    filename=$(echo $filename | sed 's/TOR/tor/g') #except "tor", this should stay lowercase
+    names+=($filename)
+done
+
+n=${#names[@]}
+
+printf '\e[?1049h'
+printf '\e[?25l'
+clear
+
+printf "   \u250C                   \u2510\n     Choose VPN client\n   \u2514                   \u2518\n\n"
+
+choice=0
+offset=0
+max_offset=$(( $n-$lim-1 ))
+
+for i in $(seq 0 $lim); do
+	printf " \u2502 ${names[$offset+$i]}\n"
+done
+
+
+printf "\e[%d;4H> ${names[$choice+$offset]}" $((5+$choice)) 
+
+while read -rsn1 ui; do
+
+
+
+    case "$ui" in
+    $'\x1b')    
+        read -rsn1 -t 0.1 char
+        if [[ "$char" == "[" ]]; then
+            read -r -s -n 1 -t 0.1 char
+            case "$char" in
+            "B"|"C") # right
+                if [[ $choice == $lim  ]]; then
+                    if [[ $offset == $max_offset ]]; then
+                        offset=0
+                        choice=0
+                    else
+                        ((offset++))
+                    fi
+                else
+                    ((choice++))
+                fi
+                ;;
+            "A"|"D") # left
+                if [[ $choice == 0 ]]; then
+                    if [[ $offset == 0 ]]; then
+                        choice=$lim
+                        offset=$max_offset
+                    else
+                        ((offset--))
+                    fi
+                else
+                    ((choice--))
+                fi
+                ;;
+        esac
+        
+        for i in $(seq 0 $lim); do
+            printf "\e[%d;4H${names[$offset+$i]}         " $((5 + $i))
+        done
+
+        printf "\e[%d;4H> ${names[$offset+$choice]}" $((5+$choice))
+
+        fi
+        # Flush "stdin" with 0.1  sec timeout.
+        read -rsn5 -t 0.1
+        ;;
+    $'\0')
+    	break ;;     
+
+    q)
+	printf '\e[?1049l'
+	printf '\e[?25h'
+    	exit 0;;
+    esac
+done
+
+vpn_file=${clients[$offset+$choice]}
+
+clear
+
+hyprctl dispatch exec kitty sudo openvpn "$vpn_file"
+
+printf '\e[?1049l'
+printf '\e[?25h'
+exit 0

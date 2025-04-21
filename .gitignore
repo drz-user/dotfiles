@@ -5,8 +5,10 @@
 !.gitignore
 !.bashrc
 !.ncpamixer.conf
+!btrestart
 !eduroam.sh
 !schindler_list.txt
+!starship.toml
 
 #Add the following folers
 !/.config/
@@ -34,3 +36,5 @@
 /.config/menus/
 /.config/pulse/
 /.config/yay/
+/.config/VirtualBox/
+/.config/qBittorrent/
